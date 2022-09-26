@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa_3_7</title>
+</head>
+
+<body>
+    <!--<table>
+        <tr>
+            <th>Cidade</th>
+            <th>Pais</th>
+            <th>Continente</th>
+        </tr>-->
+    <?php
+    /*$informacions = "Tokyo,Japan,Asia;Mexico City,Mexico,America;New York City,USA,America;Mumbai,India,Asia;Seoul,Korea,Asia;Shanghai,China,Asia;Lagos,Nigeria,Africa;Buenos Aires,Argentina,America;Cairo,Egypt,Africa;London,UK,Europe";
+        $paises = explode(";", $informacions);
+        foreach ($paises as $paise) {
+            $elementos = explode(",", $paise);
+            foreach ($elementos as $elemento) {
+                echo "<tr><td>" . $elementos[0] . "<td></td>" . $elementos[1] . "<td></td>" . $elementos[2] . "<td></tr>";
+            }
+        }*/
+
+    ?>
+    <?php
+    $elemento1 = array(
+        "name" => "John",
+        "email" => "john@demo.com",
+        "website" => "www.john.com",
+        "age" => 22,
+        "password" => "pass"
+    );
+
+    $elemento2 = array(
+        "name" => "anna",
+        "email" => "anna@demo.com",
+        "website" => "www.anna.com",
+        "age" => 24,
+        "password" => "pass"
+    );
+
+    $elemento3 = array(
+        "name" => "Peter",
+        "email" => "anna@peter.com",
+        "website" => "www.peter.com",
+        "age" => 42,
+        "password" => "pass"
+    );
+
+    $elemento4 = array(
+        "name" => "Max",
+        "email" => "anna@demo.com",
+        "website" => "www.anna.com",
+        "age" => 33,
+        "password" => "pass"
+    );
+
+
+    //$elementos = array_merge($elemento1, $elemento2, $elemento3, $elemento4);
+
+    /*echo "<ul><li>" . $elemento1["name"] . "</li><li>" . $elemento1["email"] . "</li><li>" . $elemento1["website"] . "</li><li>" . $elemento1["password"] . "</li>
+    <li>" . $elemento2["name"] . "</li><li>" . $elemento2["email"] . "</li><li>" . $elemento2["website"] . "</li><li>" . $elemento2["password"] . "</li>
+    <li>" . $elemento3["name"] . "</li><li>" . $elemento3["email"] . "</li><li>" . $elemento3["website"] . "</li><li>" . $elemento3["password"] . "</li>
+    <li>" . $elemento4["name"] . "</li><li>" . $elemento4["email"] . "</li><li>" . $elemento4["website"] . "</li><li>" . $elemento4["password"] . "</li></ul>";*/
+    echo "<ul>";
+    foreach ($elemento1 as $titulo => $valor) {
+        echo "<li>" . $titulo . ":" . $valor . "</li>";
+    }
+    echo "</ul>";
+
+    echo "<ul>";
+    foreach ($elemento2 as $titulo => $valor) {
+        echo "<li>" . $titulo . ":" . $valor . "</li>";
+    }
+    echo "</ul>";
+
+    echo "<ul>";
+    foreach ($elemento3 as $titulo => $valor) {
+        echo "<li>" . $titulo . ":" . $valor . "</li>";
+    }
+    echo "</ul>";
+
+    echo "<ul>";
+    foreach ($elemento4 as $titulo => $valor) {
+        echo "<li>" . $titulo . ":" . $valor . "</li>";
+    }
+    echo "</ul>";
+
+
+
+
+    ?>
+    </table>
+</body>
+
+</html>
