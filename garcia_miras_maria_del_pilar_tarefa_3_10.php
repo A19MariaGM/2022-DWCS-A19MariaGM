@@ -7,15 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefa 3_10</title>
     <style>
-        table {
-            border: #b2b2b2 1px solid;
-        }
-
-        td,
-        tr {
-            border: #b2b2b2 1px solid;
-        }
-
         .col1 {
             width: 100px;
         }
@@ -29,6 +20,7 @@
 <body>
 
     <?php
+    //inicializo as variables do formulario
     $username = $password = $cityEmployment = $servers = $role = $sign = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -86,8 +78,12 @@
 
 
     ?>
+
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <table>
+            <tr>
+                <th colspan="2">Novell Services Login</th>
+            </tr>
             <tr>
                 <td class="col1"><label for="username">Username:</label></td>
                 <td class="col2"> <input type="text" id="username" name="username"></td>
@@ -124,7 +120,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="col1">Single Sign-on <br> to the following::</td>
+                <td class="col1">Single Sign-on to the following:</td>
                 <td class="col2">
                     <ol style="list-style-type: none; padding:0px;">
                         <li><input type="checkbox" id="sign1" name="sign" value="Mail">
@@ -139,11 +135,8 @@
                     </ol>
                 </td>
             </tr>
-            <tr style="text-align:center" colspan="2">
-                <td>
-
-                </td>
-                <td style="text-align:left">
+            <tr style="text-align:center">
+                <td colspan="2">
                     <input type="submit" value="Login">
                     <input type="reset" value="Reset">
                 </td>
